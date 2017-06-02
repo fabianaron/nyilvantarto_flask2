@@ -1,21 +1,41 @@
 .menu-item {
-	margin: 10px 5px 10px 5px;
+    margin: 10px 5px 10px 5px;
 }
 
-.row-centered{
-	text-align:center;
+.row-centered {
+    text-align:center;
 }
 
 .col-centered {
-	float:none;
+    float:none;
 }
-
 .menu-row {
-	margin-top: 20px;
+    margin-top: 20px;
 }
 
 .content {
-background-color : #e8f1ff;
-
+background-color: #e8f1ff;
 }
 
+.inactive-content {
+    display:none;
+}
+
+.add {
+    padding: 4px 16px;
+    margin: 10px;
+    float: right;
+    border-radius: 5px;
+}
+.remove {
+    display: inline-block;
+    padding: 4px 12px;
+    border-radius: 5px;
+    float: left;
+}
+.munkaora {
+    width:100%;
+}
+.datum_mezo {
+    width:100%;
+}

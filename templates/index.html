@@ -3,11 +3,19 @@
 <head>
 <meta charset="UTF-8">
 <title>Flask App</title>
+<!-- bootstrap, jquary -->
 <script type="text/javascript" src="{{ url_for('static', filename='bower_components/jquery/dist/jquery.min.js') }}"></script>
 <script type="text/javascript" src="{{ url_for('static', filename='bower_components/bootstrap/dist/js/bootstrap.min.js') }}"></script>
 <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='bower_components/bootstrap/dist/css/bootstrap.min.css') }}">
+<!-- sajat scriptem es css fileok -->
 <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/main.css') }}">
 <script type="text/javascript" src="{{ url_for('static', filename='js/app.js') }}"></script>
+
+<!-- bootstrap datepicker -->
+<script type="text/javascript" src="{{ url_for('static', filename='bower_components/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js') }}"></script>
+<script type="text/javascript" src="{{ url_for('static', filename='bower_components/bootstrap-datepicker/dist/locales/bootstrap-datepicker.hu.min.js') }}"></script>
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='bower_components/bootstrap-datepicker/dist/css/bootstrap-datepicker.min.css') }}">
+
 </head>
 
 <body>
@@ -26,25 +34,17 @@
   {#   további információk: http://jinja.pocoo.org/docs/2.9/ #}
   <h1>Hello {{ user }} </h1>
     <div class=add_button>
-      <button class="add btn-success" onclick="addMunkanap()">+</button>
+      <button class="add btn btn-success" onclick="addMunkanap()">+</button>
     </div>
 
       <div class="munkanapok">
-        Ird be a munkanapot
+        <h3> Ird be a munkanapot </h3>
       <form id="munkanapItems" class="row">
-        <div class="new_munkanap">
-          <div class="col-xs-6 col-sm-2">
-            <input type="text" placeholder="dátum" class="datum_mezo">
-          </div>
-          <div class="col-xs-6 col-sm-2">
-            <input type="number" min="0.5" max="12" step="0.5" class="munkaora" placeholder="munkaóra">
-          </div>
-            <div class="col-xs-12 col-sm-6">
-              <textarea rows="3" placeholder="megjegyzés"></textarea>
-            </div>
-          </div>
-        <button class="remove btn-danger" onclick="removeMunkanap(this.id)">-</button>
+      <!-- ide mar a JS fogja generalni a html-t -->
       </form>
+      <div class="row">
+      <button class="btn btn-info savegomb" id="1" onclick ="sendForm()">Mentés</button>
+      </div>
     </div>
 </div>
 <div id="2" class="inactive-content content container col-md-8 col-md-offset-2">
